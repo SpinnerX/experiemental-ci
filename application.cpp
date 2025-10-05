@@ -4,6 +4,7 @@
 #include <functional>
 #include <map>
 #include <list>
+#include <unordered_set>
 
 class event_dispatcher {
 public:
