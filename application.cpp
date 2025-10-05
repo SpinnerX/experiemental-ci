@@ -1,26 +1,24 @@
-#define FMT_HEADER_ONLY
-#include <fmt/format.h>
-#include <GLFW/glfw3.h>
-using namespace std;
+#include <print>
+#include <string>
 
+#include <functional>
+
+class event_dispatcher {
+public:
+    event_dispatcher(const std::string& p_name) {
+    }
+
+
+    void add_event(const std::function<void()>& p_event_callback) {
+        p_event_callback();
+    }
+};
 
 int main(){
-    //! @note Just added the some test code to test the conan-starter setup code
-    if(!glfwInit()){
-        fmt::print("glfwInit could not be initialized!\n");
-        return -1;
-    }
-    
-    int width = 800;
-    int height = 600;
-    std::string title = "Hello Window";
-    GLFWwindow* window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
+    event_dispatcher dispatcher("Test");
 
-    while(!glfwWindowShouldClose(window)){
-        glfwPollEvents();
-        
-        glfwSwapBuffers(window);
-
-    }
+    dispatcher.add_event([](){
+        std::println("Add Event!!");
+    });
     return 0;
 }

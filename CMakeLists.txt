@@ -1,16 +1,11 @@
 cmake_minimum_required(VERSION 3.27)
 project(Starter CXX)
 
+set(CMAKE_CXX_STANDARD 20)
 
 build_application(
     SOURCES
     application.cpp
-
-    PACKAGES
-    glfw3
-    fmt
-
-    LINK_PACKAGES
-    glfw
-    fmt::fmt
 )
+
+generate_compile_commands()
