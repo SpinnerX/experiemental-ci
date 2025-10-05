@@ -8,7 +8,7 @@
 
 class event_dispatcher {
 public:
-    event_dispatcher(const std::string& p_name) {
+    event_dispatcher(std::string p_name) {
     }
 
 
