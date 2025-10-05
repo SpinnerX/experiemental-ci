@@ -9,14 +9,11 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
-          
       - name: cppcheck
         uses: deep5050/cppcheck-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN}}
           enable: all
-          
-        
       - name: publish report    
         uses: mikeal/publish-to-github-action@master
         env:
