@@ -2,6 +2,7 @@
 #include <string>
 
 #include <functional>
+#include <map>
 
 class event_dispatcher {
 public:
