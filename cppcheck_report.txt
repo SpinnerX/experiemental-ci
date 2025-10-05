@@ -1,7 +1,7 @@
-application.cpp:13:10: performance:inconclusive: Technically the member function 'event_dispatcher::add_event' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+application.cpp:14:10: performance:inconclusive: Technically the member function 'event_dispatcher::add_event' can be static (but you may consider moving to unnamed namespace). [functionStatic]
     void add_event(const std::function<void()>& p_event_callback) {
          ^
-application.cpp:9:5: style: Class 'event_dispatcher' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+application.cpp:10:5: style: Class 'event_dispatcher' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
     event_dispatcher(const std::string& p_name) {
     ^
 nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
