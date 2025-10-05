@@ -12,7 +12,7 @@ public:
     }
 
 
-    void add_event(const std::function<void()>& p_event_callback) {
+    void add_event(std::function<void()> p_event_callback) {
         p_event_callback();
     }
 };
