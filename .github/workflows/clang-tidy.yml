@@ -14,9 +14,9 @@ jobs:
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  style: '.clang-format'  # Use .clang-format config file
+                  style: 'https://github.com/SpinnerX/experiemental-cp/blob/main/.clang-format'  # Use .clang-format config file
                   version: 19 # Using clang-tidy19
-                  tidy-checks: '.clang-tidy' # Use .clang-tidy config file
+                  tidy-checks: 'https://github.com/SpinnerX/experiemental-cp/blob/main/.clang-tidy' # Use .clang-tidy config file
                   # only 'update' a single comment in a pull request thread.
                   thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
 
