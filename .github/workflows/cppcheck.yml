@@ -16,13 +16,13 @@ jobs:
           # enable:
           # exclude_check:
           # inconclusive:
-          inline_suppression: enable
-          force_language: c++
-          force: disable
+          # inline_suppression: enable
+          # force_language: c++
+          # force: disable
           # max_ctu_depth:
           # platform: unix32, unix64, win32W, win64
           std: 20
-          output_file: cppcheck_report.txt
+          # output_file: cppcheck_report.txt
           # other_options:
 
       - name: publish report    
