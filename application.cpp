@@ -3,6 +3,7 @@
 
 #include <functional>
 #include <map>
+#include <list>
 
 class event_dispatcher {
 public:
