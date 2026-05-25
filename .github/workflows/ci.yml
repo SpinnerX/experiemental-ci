@@ -4,5 +4,5 @@ on: [pull_request]
 
 jobs:
   clang-format:
-      uses: engine3d-dev/ci/.github/workflows/clang-format.yml@main
+      uses: engine3d-dev/ci/.github/workflows/lint.yml@main
       secrets: inherit
