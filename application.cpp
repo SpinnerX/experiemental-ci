@@ -15,6 +15,10 @@ public:
     void add_event(std::function<void()> p_event_callback) {
         p_event_callback();
     }
+
+    std::string name() const {
+        return "Hello Name";
+    }
 };
 
 int main(){
