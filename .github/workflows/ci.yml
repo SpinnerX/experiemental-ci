@@ -1,0 +1,8 @@
+name: Linter
+
+on: [pull_request]
+
+jobs:
+  clang-format:
+      uses: engine3d-dev/ci/.github/workflows/clang-format.yml@main
+      secrets: inherit
