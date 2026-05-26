@@ -15,7 +15,7 @@ jobs:
           # Replaced invalid input with other_options to pass the directory directly
           other_options: "src"
           
-      - name: publish report    
+      - name: publish report
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
