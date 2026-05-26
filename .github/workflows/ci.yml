@@ -11,6 +11,4 @@ jobs:
     uses: engine3d-dev/ci/.github/workflows/test_deploy.yml@main
     with:
       repo: 'experimental-ci'
-      version: '1.0'
-      run: |
-        echo "${{ github.ref_name }}"
+      version: '${{ github.ref_name }}'
