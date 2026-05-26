@@ -12,3 +12,5 @@ jobs:
     with:
       repo: 'experimental-ci'
       version: '1.0'
+      run: |
+        echo "${{ github.ref_name }}"
