@@ -1,14 +1,21 @@
-name: CI Static Analysis
-
-on: [push]
+name: cppcheck-action-test
+on: [pull_request]
 
 jobs:
-  codacy-analysis-cli:
-    name: Codacy Analysis CLI
+  build:
+    name: cppcheck-test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@main
-
-      - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@master
+      - uses: actions/checkout@v2
+          
+      - name: cppcheck
+        uses: deep5050/cppcheck-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          
+        
+      - name: publish report    
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'test' # your branch name goes here
