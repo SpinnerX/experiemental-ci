@@ -1,0 +1,14 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  clang-format:
+      uses: engine3d-dev/ci/.github/workflows/lint.yml@main
+      secrets: inherit
+  
+  test-yaml:
+    uses: engine3d-dev/ci/.github/workflows/test_deploy.yml@main
+    with:
+      repo: 'experimental-ci'
+      version: '${{ github.ref_name }}'

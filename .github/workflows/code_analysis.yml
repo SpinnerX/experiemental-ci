@@ -6,17 +6,16 @@ jobs:
     name: cppcheck-test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # Updated to latest stable version
+      - uses: actions/checkout@v2
           
       - name: cppcheck
         uses: deep5050/cppcheck-action@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Replaced invalid input with other_options to pass the directory directly
-          other_options: "src"
+          github_token: ${{ secrets.GITHUB_TOKEN}}
           
-      - name: publish report
+        
+      - name: publish report    
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: ${{ github.ref_name }}
+          BRANCH_NAME: 'test' # your branch name goes here

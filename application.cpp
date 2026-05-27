@@ -1,19 +1,25 @@
-#include <print>
 #include <string>
 
 #include <functional>
 #include <map>
 #include <list>
+#include <unordered_set>
+#include <print>
 
 class event_dispatcher {
 public:
-    event_dispatcher(const std::string& p_name) {
+    event_dispatcher(std::string p_name) {
     }
 
 
-    void add_event(const std::function<void()>& p_event_callback) {
+    void add_event(std::function<void()> p_event_callback) {
         p_event_callback();
     }
+
+    std::string name() const {
+        return "Hello Name";
+    }
+
 };
 
 int main(){
